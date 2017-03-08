@@ -1,0 +1,100 @@
+<div class="jumbotron container form-content" *ngIf="server">
+	<h2 class="text-center">Create New Server</h2>
+	<hr />
+	<!-- <div class="alert alert-success" role="alert" *ngIf="success">
+		Server add successful!
+		{{debug()}}
+	</div> -->
+
+	{{server.name}}
+
+
+	<form [formGroup]="serverForm" *ngIf="!success" (ngSubmit)="updateServer()">
+		<div class="row">
+			<div class="col-md-3">
+				<div class="form-group">
+					<label class="control-label" for="name">Name</label>
+					<input type="text" class="form-control" formControlName="name"
+					id="name">
+					<p *ngIf="serverForm.controls.name.errors" class="alert alert-danger">This field is required!</p>
+				</div>
+				<div class="form-group">
+					<label class="control-label" for="domain">Domain</label>
+					<input type="text" class="form-control" formControlName="domain"
+					id="domain">
+					<p *ngIf="serverForm.controls.domain.errors" class="alert alert-danger">This field is required!</p>
+				</div>
+			</div>
+
+
+    <div class="col-md-3">
+      <div class="form-group">
+        <label class="control-label" for="network">Network</label>
+        <input type="text" class="form-control" formControlName="network"
+        id="network">
+				<p *ngIf="serverForm.controls.network.errors" class="alert alert-danger">This field is required!</p>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="ip">IP</label>
+        <input type="text" class="form-control" formControlName="ip"
+        id="ip">
+				<p *ngIf="serverForm.controls.ip.errors" class="alert alert-danger">This field is required!</p>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="netmask">Netmask</label>
+        <input type="text" class="form-control" formControlName="netmask"
+        id="netmask">
+				<p *ngIf="serverForm.controls.netmask.errors" class="alert alert-danger">This field is required!</p>
+      </div>
+      <div class="form-group">
+        <label class="control-label" for="router">Router</label>
+        <input type="text" class="form-control" formControlName="router"
+        id="router">
+				<p *ngIf="serverForm.controls.router.errors" class="alert alert-danger">This field is required!</p>
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="form-group">
+        <label class="control-label" for="ns1">NS1</label>
+        <input type="text" class="form-control" formControlName="ns1"
+        id="ns1">
+			</div>
+			<div class="form-group">
+        <label class="control-label" for="ns2">NS2</label>
+        <input type="text" class="form-control" formControlName="ns2"
+        id="ns2">
+      </div>
+    </div>
+
+    <div class="col-md-3">
+      <div class="form-group">
+        <label class="control-label" for="so">SO</label>
+        <select formControlName="so" id="so" class="form-control">
+          <option value="">Select</option>
+        </select>
+        <label class="control-label" for="version">Version</label>
+        <input type="text" class="form-control" formControlName="version"
+        id="version">
+        <label class="control-label" for="arch">Arch</label>
+        <input type="text" class="form-control" formControlName="arch"
+        id="arch">
+        <label class="control-label" for="function">Function</label>
+        <input type="text" class="form-control" formControlName="function"
+        id="function">
+        <label class="control-label" for="user">User</label>
+        <input type="text" class="form-control" formControlName="user"
+        id="user">
+        <label class="control-label" for="password">Password</label>
+        <input type="text" class="form-control" formControlName="password"
+        id="password">
+      </div>
+    </div>
+	</div>
+
+		<hr />
+		<div class="form-group text-center">
+			<button type="submit" class="btn btn-primary" [disabled]="!this.serverForm.valid">UPDATE</button>
+		</div>
+	</form>
+</div>

@@ -1,0 +1,41 @@
+.bg-nav {
+  background-color: #212121;
+}
+
+.btn-dropdown {
+  border: none !important;
+  margin-top: 3px;
+}
+
+.btn-dropdown:hover {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.btn-dropdown:focus {
+  box-shadow: none !important;
+}
+
+.item-dropdown:hover{
+  background-color: #212121;
+}
+
+.item-dropdown-link:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.show>.btn-outline-primary.dropdown-toggle {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.btn-outline-success {
+  color: white;
+  border-color: white;
+}
+
+.btn-outline-success:hover {
+  border-color: transparent;
+}

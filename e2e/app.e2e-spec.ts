@@ -1,10 +1,10 @@
-import { NgMyServersPage } from './app.po';
+import { MyServersPage } from './app.po';
 
-describe('ng-my-servers App', function() {
-  let page: NgMyServersPage;
+describe('my-servers App', function() {
+  let page: MyServersPage;
 
   beforeEach(() => {
-    page = new NgMyServersPage();
+    page = new MyServersPage();
   });
 
   it('should display message saying app works', () => {
